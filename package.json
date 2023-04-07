@@ -1,6 +1,6 @@
 {
   "name": "c-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "Elben",
   "description": "非常流弊的小组件库项目模板",
@@ -35,6 +35,10 @@
         "./dist/index.d.ts"
       ]
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elben9/library-cli"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
