@@ -1,0 +1,47 @@
+{
+  "name": "c-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Elben",
+  "description": "非常流弊的小组件库项目模板",
+  "keywords": [],
+  "license": "ISC",
+  "packageManager": "pnpm@8.0.0",
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest",
+    "dev": "esno src/index.ts",
+    "release": "bumpp && npm publish"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "bumpp": "^9.1.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "unbuild": "^1.2.0",
+    "vitest": "^0.29.8"
+  }
+}
