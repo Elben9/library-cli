@@ -3,8 +3,14 @@
   "version": "1.0.3-beta.10",
   "type": "module",
   "author": "Elben",
-  "description": "mini library cli",
-  "keywords": [],
+  "description": "A lightweight library templates",
+  "keywords": [
+    "library",
+    "cli",
+    "unbuild",
+    "typescript",
+    "vitest"
+  ],
   "license": "ISC",
   "packageManager": "pnpm@8.0.0",
   "scripts": {
@@ -13,7 +19,8 @@
     "test": "vitest",
     "dev": "esno src/index.ts",
     "release": "bumpp && npm publish",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "coverage": "vitest run --coverage"
   },
   "files": [
     "dist",
@@ -45,6 +52,8 @@
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.57.1",
+    "@vitest/coverage-c8": "^0.30.0",
+    "@vitest/coverage-istanbul": "^0.30.0",
     "bumpp": "^9.1.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^34.0.1",
@@ -53,17 +62,18 @@
     "eslint-plugin-promise": "^6.0.0",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
+    "jsdom": "^21.1.1",
     "lint-staged": "^13.2.1",
     "rimraf": "^5.0.0",
     "simple-git-hooks": "^2.8.1",
     "typescript": "*",
     "unbuild": "^1.2.0",
-    "vitest": "^0.29.8"
+    "vitest": "^0.30.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*.{ts,js,vue}": "eslint --cache --fix"
   }
 }
