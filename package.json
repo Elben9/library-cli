@@ -1,6 +1,6 @@
 {
-  "name": "c-cli",
-  "version": "1.0.3-beta.3",
+  "name": "e-cli",
+  "version": "1.0.3-beta.4",
   "type": "module",
   "author": "Elben",
   "description": "非常流弊的小组件库项目模板",
