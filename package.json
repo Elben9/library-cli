@@ -1,9 +1,9 @@
 {
   "name": "@elben9/cli",
-  "version": "1.0.3-beta.6",
+  "version": "1.0.3-beta.7",
   "type": "module",
   "author": "Elben",
-  "description": "非常流弊的小组件库项目模板",
+  "description": "mini library cli",
   "keywords": [],
   "license": "ISC",
   "packageManager": "pnpm@8.0.0",
