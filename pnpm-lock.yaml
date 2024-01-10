@@ -7,6 +7,7 @@ specifiers:
   '@vitest/coverage-c8': ^0.30.0
   '@vitest/coverage-istanbul': ^0.30.0
   bumpp: ^9.1.0
+  child_process: ^1.0.2
   eslint: ^8.0.1
   eslint-config-standard-with-typescript: ^34.0.1
   eslint-plugin-import: ^2.25.2
@@ -14,10 +15,12 @@ specifiers:
   eslint-plugin-promise: ^6.0.0
   esno: ^0.16.3
   fast-glob: ^3.2.12
+  image-size: ^1.0.2
   jsdom: ^21.1.1
   lint-staged: ^13.2.1
   rimraf: ^5.0.0
   simple-git-hooks: ^2.8.1
+  tinify: ^1.7.1
   typescript: '*'
   unbuild: ^1.2.0
   vitest: ^0.30.0
@@ -29,6 +32,7 @@ devDependencies:
   '@vitest/coverage-c8': 0.30.0_vitest@0.30.0
   '@vitest/coverage-istanbul': 0.30.0_vitest@0.30.0
   bumpp: 9.1.0
+  child_process: 1.0.2
   eslint: 8.38.0
   eslint-config-standard-with-typescript: 34.0.1_j3fhzdp65ug6ppvepuyk7jymkq
   eslint-plugin-import: 2.27.5_4vu7b2zbwdjbs6wef5no3teiu4
@@ -36,10 +40,12 @@ devDependencies:
   eslint-plugin-promise: 6.1.1_eslint@8.38.0
   esno: 0.16.3
   fast-glob: 3.2.12
+  image-size: 1.0.2
   jsdom: 21.1.1
   lint-staged: 13.2.1
   rimraf: 5.0.0
   simple-git-hooks: 2.8.1
+  tinify: 1.7.1
   typescript: 5.0.3
   unbuild: 1.2.0
   vitest: 0.30.0_jsdom@21.1.1
@@ -1263,6 +1269,10 @@ packages:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
     dev: true
 
+  /child_process/1.0.2:
+    resolution: {integrity: sha512-Wmza/JzL0SiWz7kl6MhIKT5ceIlnFPJX+lwUGj7Clhy5MMldsSoJR0+uvRzOS5Kv45Mq7t1PoE8TsOA9bzvb6g==}
+    dev: true
+
   /chownr/2.0.0:
     resolution: {integrity: sha1-Fb++U9LqtM9w8YqM1o6+Wzyx3s4=}
     engines: {node: '>=10'}
@@ -2349,6 +2359,14 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /image-size/1.0.2:
+    resolution: {integrity: sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      queue: 6.0.2
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3234,12 +3252,22 @@ packages:
       react-is: 17.0.2
     dev: true
 
+  /promise-nodeify/3.0.1:
+    resolution: {integrity: sha512-ghsSuzZXJX8iO7WVec2z7GI+Xk/EyiD+JZK7AZKhUqYfpLa/Zs4ylUD+CwwnKlG6G3HnkUPMAi6PO7zeqGKssg==}
+    engines: {node: '>=6', npm: '>=1.3.7'}
+    dev: true
+
   /prompts/2.4.2:
     resolution: {integrity: sha1-e1fnOzpIAprRDr1E90sBcipMsGk=}
     engines: {node: '>= 6'}
     dependencies:
       kleur: 3.0.3
       sisteransi: 1.0.5
+    dev: true
+
+  /proxying-agent/2.4.0:
+    resolution: {integrity: sha512-b9vDqIcViJZVsWPpQlp9Py74u+Wqd0a+kMkkg7zX58mwNtrNbOChNlRTM7lUrlpiwNzyJCV8+5D8rnZYLDFh7Q==}
+    engines: {node: '>=0.8.0'}
     dev: true
 
   /psl/1.9.0:
@@ -3257,6 +3285,12 @@ packages:
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=}
+    dev: true
+
+  /queue/6.0.2:
+    resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
+    dependencies:
+      inherits: 2.0.4
     dev: true
 
   /rc9/2.1.0:
@@ -3651,6 +3685,14 @@ packages:
   /time-zone/1.0.0:
     resolution: {integrity: sha512-TIsDdtKo6+XrPtiTm1ssmMngN1sAhyKnTO2kunQWqNPWIVvCm15Wmw4SWInwTVgJ5u/Tr04+8Ei9TNcw4x4ONA==}
     engines: {node: '>=4'}
+    dev: true
+
+  /tinify/1.7.1:
+    resolution: {integrity: sha512-IbZwiVG0iN/BwZB0XTA45uNyv3DxDByL9TK0jI++hyWtnV68BgNKl0r+iNLsIEDasN3IntHaeaQbiVfaQVnLdQ==}
+    engines: {node: '>= 6.0'}
+    dependencies:
+      promise-nodeify: 3.0.1
+      proxying-agent: 2.4.0
     dev: true
 
   /tinybench/2.4.0:
